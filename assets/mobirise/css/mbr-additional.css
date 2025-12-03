@@ -1,6 +1,164 @@
 body {
   font-family: Jost;
 }
+
+/* ===== CUSTOM NERDMINER STYLES ===== */
+
+/* Pulse Animation for CTA Buttons */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 225, 97, 0.7);
+  }
+  70% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 15px rgba(255, 225, 97, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 225, 97, 0);
+  }
+}
+
+.pulse-btn {
+  animation: pulse 2s infinite;
+  font-weight: 600 !important;
+}
+
+.pulse-btn:hover {
+  animation: none;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Features Section */
+#features {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 80px 0;
+}
+
+#features .item-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 225, 97, 0.2);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+#features .item-wrapper:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 225, 97, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+#features .item-title,
+#features .item-text,
+#features .mbr-section-title,
+#features .mbr-section-subtitle {
+  color: #ffffff;
+}
+
+/* How Works Section */
+#howworks {
+  background: #0f0f23;
+  padding: 80px 0;
+}
+
+#howworks .mbr-section-title,
+#howworks .mbr-text,
+#howworks .stat-label {
+  color: #ffffff;
+}
+
+#howworks .stats-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 225, 97, 0.2);
+}
+
+/* FAQ Section */
+#faq {
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+  padding: 80px 0;
+}
+
+#faq .mbr-section-title {
+  color: #ffffff;
+}
+
+#faq .accordion-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 225, 97, 0.2);
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+#faq .accordion-button {
+  background: transparent;
+  color: #ffffff;
+  padding: 1.25rem;
+}
+
+#faq .accordion-button:not(.collapsed) {
+  background: rgba(255, 225, 97, 0.1);
+  color: #ffe161;
+}
+
+#faq .accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(255, 225, 97, 0.3);
+}
+
+#faq .accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+#faq .accordion-body {
+  background: rgba(0, 0, 0, 0.2);
+  color: #cccccc;
+  padding: 1.25rem;
+}
+
+/* CTA Section */
+#cta {
+  background: linear-gradient(135deg, #ffe161 0%, #f5c518 100%);
+  padding: 80px 0;
+}
+
+#cta .mbr-section-title,
+#cta .mbr-text {
+  color: #1a1a2e;
+}
+
+#cta .btn-warning {
+  background: #1a1a2e;
+  color: #ffe161;
+  border: none;
+}
+
+#cta .btn-warning:hover {
+  background: #0f0f23;
+}
+
+/* Footer */
+#footer {
+  background: #0f0f23;
+  padding: 40px 0;
+}
+
+/* Lazy Loading Images */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded,
+img[loading="lazy"]:not([src=""]) {
+  opacity: 1;
+}
+
+/* ===== END CUSTOM STYLES ===== */
+
 .display-1 {
   font-family: 'Jost', sans-serif;
   font-size: 4rem;

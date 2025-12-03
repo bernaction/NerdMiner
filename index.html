@@ -1,115 +1,1202 @@
 <!DOCTYPE html>
-<html  >
+<html lang="pt-BR">
 <head>
-  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image:src" content="assets/images/index-meta.jpg">
-  <meta property="og:image" content="assets/images/index-meta.jpg">
-  <meta name="twitter:title" content="NerdMiner.com.br - Mini ASIC de Mineração de Bitcoin">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  
+  <title>NerdMiner - Mini ASIC de Mineração de Bitcoin | ESP32 Lottery Mining</title>
+  <meta name="description" content="NerdMiner é um mini dispositivo ASIC de mineração de Bitcoin com ESP32. Aprenda mineração de forma prática e divertida com Lottery Mining. Compre agora!">
+  <meta name="keywords" content="NerdMiner, mineração Bitcoin, ESP32, ASIC, Lottery Mining, criptomoedas, Bitcoin mining, mini ASIC, minerador Bitcoin">
+  <meta name="author" content="NerdMiner Brasil">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nerdminer.com.br/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nerdminer.com.br/">
+  <meta property="og:title" content="NerdMiner - Mini ASIC de Mineração de Bitcoin">
+  <meta property="og:description" content="Dispositivo ESP32 para mineração de Bitcoin. Aprenda sobre Lottery Mining de forma prática e educativa.">
+  <meta property="og:image" content="https://nerdminer.com.br/assets/images/index-meta.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="NerdMiner Brasil">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nerdminer.com.br/">
+  <meta name="twitter:title" content="NerdMiner - Mini ASIC de Mineração de Bitcoin">
+  <meta name="twitter:description" content="Dispositivo ESP32 para mineração de Bitcoin. Aprenda sobre Lottery Mining de forma prática e educativa.">
+  <meta name="twitter:image" content="https://nerdminer.com.br/assets/images/index-meta.jpg">
+  
   <link rel="shortcut icon" href="assets/images/img-2644-128x70-1.png" type="image/x-icon">
-  <meta name="description" content="NerdMiner permite que você mergulhe nas complexidades da mineração de Bitcoin de maneira prática e divertida, sem a necessidade de equipamentos caros ou conhecimentos avançados em tecnologia. Ele é uma porta de entrada para o universo emocionante das criptomoedas, onde você pode aprender, experimentar e, quem sabe, com uma chance quase impossível, de até mesmo descobrir um bloco de Bitcoin no modo Lottery Mining.">
   
-  
-  <title>NerdMiner.com.br - Mini ASIC de Mineração de Bitcoin</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/web/assets/gdpr-plugin/gdpr-styles.css">
-  <link rel="stylesheet" href="assets/animatecss/animate.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "NerdMiner",
+    "description": "Mini dispositivo ASIC de mineração de Bitcoin baseado em ESP32 para Lottery Mining",
+    "brand": {
+      "@type": "Brand",
+      "name": "NerdMiner"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://nerdminer.com.br/loja.html",
+      "availability": "https://schema.org/InStock"
+    },
+    "image": "https://nerdminer.com.br/assets/images/index-meta.jpg"
+  }
+  </script>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #f7931a;
+      --primary-dark: #e8850f;
+      --secondary: #4a9fff;
+      --dark: #0a0a0f;
+      --dark-lighter: #12121a;
+      --dark-card: #1a1a24;
+      --text: #ffffff;
+      --text-muted: #8a8a9a;
+      --gradient-1: linear-gradient(135deg, #f7931a 0%, #ffb347 100%);
+      --gradient-2: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-dark: linear-gradient(180deg, #0a0a0f 0%, #12121a 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+    }
+
+    /* Navbar */
+    .navbar-custom {
+      background: rgba(10, 10, 15, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-custom.scrolled {
+      background: rgba(10, 10, 15, 0.95);
+      padding: 0.5rem 0;
+    }
+
+    .navbar-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-link {
+      color: var(--text-muted) !important;
+      font-weight: 500;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text) !important;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-primary-custom {
+      background: var(--gradient-1);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      color: #000;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(247, 147, 26, 0.3);
+    }
+
+    .btn-primary-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(247, 147, 26, 0.4);
+      color: #000;
+    }
+
+    .btn-outline-custom {
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      color: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-custom:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: rgba(247, 147, 26, 0.1);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 100px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(247, 147, 26, 0.15) 0%, transparent 70%);
+      animation: pulse-glow 4s ease-in-out infinite;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(74, 159, 255, 0.1) 0%, transparent 70%);
+      animation: pulse-glow 4s ease-in-out infinite 2s;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(247, 147, 26, 0.1);
+      border: 1px solid rgba(247, 147, 26, 0.3);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge i {
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 span {
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-text {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      max-width: 540px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-item h3 {
+      font-size: 2.5rem;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-item p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 500px;
+      filter: drop-shadow(0 20px 50px rgba(247, 147, 26, 0.3));
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(247, 147, 26, 0.2) 0%, transparent 70%);
+      z-index: -1;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 120px 0;
+      background: var(--dark-lighter);
+      position: relative;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(247, 147, 26, 0.1);
+      border: 1px solid rgba(247, 147, 26, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .section-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+    }
+
+    .feature-card {
+      background: var(--dark-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      padding: 2.5rem;
+      height: 100%;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--gradient-1);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(247, 147, 26, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .feature-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      background: rgba(247, 147, 26, 0.1);
+      color: var(--primary);
+    }
+
+    .feature-card h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* How it Works */
+    .how-it-works {
+      padding: 120px 0;
+      background: var(--dark);
+    }
+
+    .step-card {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .step-number {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--gradient-1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #000;
+      margin: 0 auto 1.5rem;
+    }
+
+    .step-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .step-card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* Stats Section */
+    .stats-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, rgba(247, 147, 26, 0.1) 0%, rgba(74, 159, 255, 0.05) 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 991px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stat-box {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .stat-box h2 {
+      font-size: 3.5rem;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-box p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 120px 0;
+      background: var(--dark-lighter);
+    }
+
+    .accordion-item {
+      background: var(--dark-card);
+      border: 1px solid rgba(255, 255, 255, 0.05) !important;
+      border-radius: 16px !important;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .accordion-button {
+      background: transparent;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 1.5rem 2rem;
+      box-shadow: none !important;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: rgba(247, 147, 26, 0.1);
+      color: var(--primary);
+    }
+
+    .accordion-button::after {
+      filter: brightness(0) invert(1);
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      filter: brightness(0) saturate(100%) invert(63%) sepia(87%) saturate(1015%) hue-rotate(360deg) brightness(101%) contrast(94%);
+    }
+
+    .accordion-body {
+      padding: 0 2rem 1.5rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 120px 0;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(247, 147, 26, 0.1) 0%, transparent 70%);
+    }
+
+    .cta-card {
+      background: linear-gradient(135deg, var(--dark-card) 0%, rgba(247, 147, 26, 0.1) 100%);
+      border: 1px solid rgba(247, 147, 26, 0.2);
+      border-radius: 32px;
+      padding: 4rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-card h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-card p {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 60px 0 30px;
+    }
+
+    .footer-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      max-width: 300px;
+      line-height: 1.7;
+    }
+
+    .footer-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+      color: #000;
+      transform: translateY(-3px);
+    }
+
+    /* Scroll to Top */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--gradient-1);
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      border: none;
+      box-shadow: 0 4px 15px rgba(247, 147, 26, 0.4);
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(247, 147, 26, 0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero-stats {
+        gap: 2rem;
+      }
+
+      .stat-item h3 {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+      .cta-card {
+        padding: 3rem 2rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero {
+        text-align: center;
+        padding-top: 120px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+
+      .hero-image {
+        margin-top: 3rem;
+      }
+
+      .hero-image img {
+        max-width: 300px;
+      }
+
+      .stat-box h2 {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--dark);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--dark-card);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary);
+    }
+  </style>
 </head>
 <body>
 
-<!-- Analytics -->
-
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMSQK03ZPV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-MMSQK03ZPV');
 </script>
 
-<!-- /Analytics -->
-
-
-  
-  <section data-bs-version="5.1" class="menu menu2 cid-tPLWhLKkaK" once="menu" id="menu2-5">
-    
-    <nav class="navbar navbar-dropdown navbar-expand-lg">
-        <div class="container">
-            <div class="navbar-brand">
-                
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-warning text-primary display-1" href="index.html">NerdMiner</a></span>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html"><span class="mobi-mbri mobi-mbri-home mbr-iconfont mbr-iconfont-btn"></span>Home</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="lottery-mining.html"><span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>Lottery Mining</a></li><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="fotos.html"><span class="mobi-mbri mobi-mbri-camera mbr-iconfont mbr-iconfont-btn"></span>Galeria de Fotos</a></li></ul>
-                
-                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-warning display-4" href="loja.html"><span class="mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>Adquira Já</a></div>
-            </div>
-        </div>
-    </nav>
-</section>
-
-<section data-bs-version="5.1" class="header5 cid-tPLwiUEIaL mbr-fullscreen" id="header5-1">
-
-    
-
-    
-    
-
-    <div class="container">
-        <div class="row justify-content-end">
-            <div class="col-12 col-lg-7">
-                <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-3 display-1"><strong><br></strong><strong>NerdMiner</strong></h1>
-                
-                <p class="mbr-text mbr-fonts-style mbr-white display-7">Você já ouviu falar sobre Bitcoin e se perguntou como a mineração realmente funciona?<br><br> Bem, o NerdMiner veio para tornar esse processo intrigante mais acessível do que nunca. Este pequeno dispositivo, construído com a tecnologia do ESP32, foi projetado com uma missão única em mente: proporcionar uma experiência prática de mineração de Bitcoin para todos, independentemente do seu nível de conhecimento técnico.
-<br>
-<br>A mineração de Bitcoin costumava ser um território reservado para especialistas em hardware e software, mas o NerdMiner muda esse paradigma. Com um hashrate ínfimo, ele oferece uma introdução amigável e educativa ao mundo da mineração de criptomoedas. Este dispositivo é a ferramenta perfeita para aqueles que desejam entender melhor como as transações de Bitcoin são verificadas e garantidas por meio de um processo de mineração.
-<br>
-<br>O NerdMiner permite que você mergulhe nas complexidades da mineração de Bitcoin de maneira prática e divertida, sem a necessidade de equipamentos caros ou conhecimentos avançados em tecnologia. Ele é uma porta de entrada para o universo emocionante das criptomoedas, onde você pode aprender, experimentar e, quem sabe, com uma chance quase impossível, até mesmo de descobrir um bloco de Bitcoin no modo Lottery Mining.<br>
-<br>Descubra a magia da mineração de Bitcoin de uma forma fácil e didática com o NerdMiner - a sua passagem para o futuro financeiro digital.<br><br></p>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-warning display-7" href="loja.html">Como adquirir?</a> <a class="btn btn-warning-outline display-7" href="lottery-mining.html">Saiba mais sobre Lottery Mining</a></div>
-            </div>
-        </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-cpu-fill me-2"></i>NerdMiner
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto me-4">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lottery-mining.html">Lottery Mining</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="fotos.html">Galeria</a>
+        </li>
+      </ul>
+      <a href="loja.html" class="btn btn-primary-custom">
+        <i class="bi bi-cart3 me-2"></i>Comprar Agora
+      </a>
     </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+        <div class="hero-badge">
+          <i class="bi bi-circle-fill text-success"></i>
+          Minerando Bitcoin 24/7
+        </div>
+        <h1>
+          O Menor<br>
+          <span>Minerador Bitcoin</span><br>
+          do Mundo
+        </h1>
+        <p class="hero-text">
+          Conheça o NerdMiner: um mini dispositivo ASIC baseado em ESP32 que transforma a 
+          mineração de Bitcoin em uma experiência educativa e divertida. Lottery Mining na prática!
+        </p>
+        <div class="hero-buttons">
+          <a href="loja.html" class="btn btn-primary-custom btn-lg">
+            <i class="bi bi-lightning-charge-fill me-2"></i>Adquira o Seu
+          </a>
+          <a href="lottery-mining.html" class="btn btn-outline-custom btn-lg">
+            Saiba Mais <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>~78</h3>
+            <p>kH/s Hashrate</p>
+          </div>
+          <div class="stat-item">
+            <h3>&lt;1W</h3>
+            <p>Consumo</p>
+          </div>
+          <div class="stat-item">
+            <h3>24/7</h3>
+            <p>Minerando</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <div class="hero-image">
+          <div class="hero-glow"></div>
+          <img src="assets/images/img-2643-1256x942.webp" alt="NerdMiner ESP32 - Mini Minerador de Bitcoin" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Features Section -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-badge">
+        <i class="bi bi-stars"></i> Recursos
+      </span>
+      <h2 class="section-title">Por que escolher o NerdMiner?</h2>
+      <p class="section-subtitle mx-auto">
+        O dispositivo perfeito para quem quer aprender sobre mineração de Bitcoin de forma prática
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-lightning-charge"></i>
+          </div>
+          <h4>Ultra Baixo Consumo</h4>
+          <p>Consome menos de 1 Watt. Pode ficar ligado 24 horas sem impacto na conta de energia.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-book"></i>
+          </div>
+          <h4>100% Educativo</h4>
+          <p>Aprenda na prática como funciona a mineração de Bitcoin e a tecnologia blockchain.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-trophy"></i>
+          </div>
+          <h4>Lottery Mining</h4>
+          <p>Tente a sorte! Cada hash é uma chance de encontrar um bloco e ganhar 3.125 BTC.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-currency-dollar"></i>
+          </div>
+          <h4>Super Acessível</h4>
+          <p>Monte seu próprio NerdMiner com componentes fáceis de encontrar e baixo custo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/ytplayer/index.js"></script>
-  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-  <script src="assets/theme/js/script.js"></script>
-  
-  
-  
- <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
-    <input name="animation" type="hidden">
-  </body>
+<!-- How it Works -->
+<section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-badge">
+        <i class="bi bi-gear"></i> Como Funciona
+      </span>
+      <h2 class="section-title">Simples e Fácil de Usar</h2>
+      <p class="section-subtitle mx-auto">
+        Em poucos minutos seu NerdMiner estará minerando Bitcoin
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h4>Conecte via USB</h4>
+          <p>Basta plugar o NerdMiner em qualquer porta USB. Pode ser no computador, carregador ou power bank.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h4>Configure o WiFi</h4>
+          <p>Acesse a interface web e configure sua rede WiFi e endereço Bitcoin para receber as recompensas.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h4>Comece a Minerar!</h4>
+          <p>Pronto! O NerdMiner começa a minerar automaticamente. Acompanhe o hashrate em tempo real na tela.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-box" data-aos="zoom-in" data-aos-delay="0">
+        <h2>78kH/s</h2>
+        <p>Hashrate Médio</p>
+      </div>
+      <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
+        <h2>&lt;1W</h2>
+        <p>Consumo de Energia</p>
+      </div>
+      <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
+        <h2>3.125</h2>
+        <p>BTC por Bloco</p>
+      </div>
+      <div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
+        <h2>∞</h2>
+        <p>De Diversão</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-badge">
+        <i class="bi bi-question-circle"></i> FAQ
+      </span>
+      <h2 class="section-title">Perguntas Frequentes</h2>
+      <p class="section-subtitle mx-auto">
+        Tire suas dúvidas sobre o NerdMiner
+      </p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                O NerdMiner realmente minera Bitcoin?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Sim! O NerdMiner realiza cálculos reais de mineração de Bitcoin e envia os resultados para a rede. 
+                Porém, devido ao baixo hashrate (~78 kH/s), as chances de encontrar um bloco são extremamente baixas - 
+                por isso chamamos de "Lottery Mining". É como jogar na loteria, mas aprendendo sobre Bitcoin!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                Quais são as chances de encontrar um bloco?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                As chances são aproximadamente <strong>120 vezes menores</strong> do que ganhar na Mega-Sena! 
+                Mas diferente da loteria convencional, você pode "jogar" 24 horas por dia, 7 dias por semana, 
+                gastando menos de R$1 por mês de energia. É a loteria mais barata do mundo!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                Preciso de internet para usar?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Sim, o NerdMiner precisa de conexão WiFi para se comunicar com a pool de mineração e 
+                enviar os resultados dos cálculos. Ele se conecta automaticamente à sua rede doméstica 
+                e não usa muitos dados - menos de 100MB por mês!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                É difícil configurar?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Não! O NerdMiner vem com o firmware pré-instalado. Basta conectar ao USB, 
+                configurar sua rede WiFi e endereço Bitcoin através da interface web intuitiva, e pronto - 
+                ele começa a minerar automaticamente. Leva menos de 5 minutos!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                Se eu encontrar um bloco, quanto recebo?
+              </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Se você tiver a sorte extraordinária de encontrar um bloco, receberá a recompensa completa: 
+                atualmente <strong>3.125 BTC</strong> (mais as taxas de transação do bloco). 
+                Com o preço atual do Bitcoin, isso pode representar mais de R$1.500.000,00! 🚀
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10" data-aos="zoom-in">
+        <div class="cta-card">
+          <h2>Pronto para começar sua jornada? 🚀</h2>
+          <p>
+            Adquira seu NerdMiner hoje e faça parte da revolução Bitcoin! 
+            Aprenda, divirta-se e quem sabe... tenha muita sorte!
+          </p>
+          <a href="loja.html" class="btn btn-primary-custom btn-lg">
+            <i class="bi bi-cart3 me-2"></i>Ver Modelos e Comprar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <div class="footer-brand">
+          <i class="bi bi-cpu-fill me-2"></i>NerdMiner
+        </div>
+        <p class="footer-text">
+          O menor minerador de Bitcoin do mundo. Aprenda sobre mineração de forma prática, 
+          divertida e educativa.
+        </p>
+        <div class="social-links mt-4">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+        <h5 class="footer-title">Navegação</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lottery-mining.html">Lottery Mining</a></li>
+          <li><a href="fotos.html">Galeria</a></li>
+          <li><a href="loja.html">Loja</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+        <h5 class="footer-title">Recursos</h5>
+        <ul class="footer-links">
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#how-it-works">Como Funciona</a></li>
+          <li><a href="loja.html">Modelos</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <h5 class="footer-title">Sobre o Projeto</h5>
+        <p class="footer-text">
+          O NerdMiner é um projeto open-source que utiliza ESP32 para mineração educacional de Bitcoin. 
+          Junte-se à comunidade de entusiastas!
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2023-2025 NerdMiner Brasil. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top -->
+<button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init({
+    once: true,
+    duration: 800,
+    easing: 'ease-out-cubic'
+  });
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar-custom');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Scroll to top button
+  const scrollTop = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      scrollTop.classList.add('visible');
+    } else {
+      scrollTop.classList.remove('visible');
+    }
+  });
+
+  scrollTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
 </html>

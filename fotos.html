@@ -1,228 +1,859 @@
 <!DOCTYPE html>
-<html  >
+<html lang="pt-BR">
 <head>
-  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image:src" content="assets/images/fotos-meta.png">
-  <meta property="og:image" content="assets/images/fotos-meta.png">
-  <meta name="twitter:title" content="NerdMiner - Galeria de Fotos">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  
+  <title>Galeria de Fotos NerdMiner | Veja o Mini ASIC de Bitcoin</title>
+  <meta name="description" content="Confira fotos do NerdMiner em ação! Galeria com imagens do mini dispositivo ASIC de mineração de Bitcoin baseado em ESP32.">
+  <meta name="keywords" content="fotos NerdMiner, galeria NerdMiner, imagens minerador Bitcoin, ESP32 fotos, mini ASIC imagens">
+  <meta name="author" content="NerdMiner Brasil">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nerdminer.com.br/fotos.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nerdminer.com.br/fotos.html">
+  <meta property="og:title" content="Galeria de Fotos NerdMiner">
+  <meta property="og:description" content="Veja fotos do mini dispositivo ASIC de mineração de Bitcoin em ação.">
+  <meta property="og:image" content="https://nerdminer.com.br/assets/images/fotos-meta.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="NerdMiner Brasil">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nerdminer.com.br/fotos.html">
+  <meta name="twitter:title" content="Galeria de Fotos NerdMiner">
+  <meta name="twitter:description" content="Veja fotos do mini dispositivo ASIC de mineração de Bitcoin em ação.">
+  <meta name="twitter:image" content="https://nerdminer.com.br/assets/images/fotos-meta.png">
+  
   <link rel="shortcut icon" href="assets/images/img-2644-128x70-1.png" type="image/x-icon">
-  <meta name="description" content="">
   
-  
-  <title>NerdMiner - Galeria de Fotos</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/web/assets/gdpr-plugin/gdpr-styles.css">
-  <link rel="stylesheet" href="assets/animatecss/animate.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Galeria de Fotos NerdMiner",
+    "description": "Fotos do mini dispositivo ASIC de mineração de Bitcoin",
+    "author": {
+      "@type": "Organization",
+      "name": "NerdMiner Brasil"
+    }
+  }
+  </script>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #f7931a;
+      --primary-dark: #e8850f;
+      --secondary: #4a9fff;
+      --dark: #0a0a0f;
+      --dark-lighter: #12121a;
+      --dark-card: #1a1a24;
+      --text: #ffffff;
+      --text-muted: #8a8a9a;
+      --gradient-1: linear-gradient(135deg, #f7931a 0%, #ffb347 100%);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+    }
+
+    /* Navbar */
+    .navbar-custom {
+      background: rgba(10, 10, 15, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-custom.scrolled {
+      background: rgba(10, 10, 15, 0.95);
+      padding: 0.5rem 0;
+    }
+
+    .navbar-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-link {
+      color: var(--text-muted) !important;
+      font-weight: 500;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text) !important;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+    }
+
+    .btn-primary-custom {
+      background: var(--gradient-1);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      color: #000;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(247, 147, 26, 0.3);
+    }
+
+    .btn-primary-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(247, 147, 26, 0.4);
+      color: #000;
+    }
+
+    /* Page Hero */
+    .page-hero {
+      padding: 160px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(247, 147, 26, 0.1) 0%, transparent 70%);
+    }
+
+    .page-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .page-hero h1 span {
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-hero .lead {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 700px;
+    }
+
+    /* Gallery Section */
+    .gallery-section {
+      padding: 60px 0 100px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 991px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    .gallery-item .zoom-icon {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--gradient-1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-size: 1.25rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .gallery-item:hover .zoom-icon {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Feature item - larger */
+    .gallery-item.featured {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: auto;
+    }
+
+    @media (max-width: 576px) {
+      .gallery-item.featured {
+        grid-column: span 1;
+        grid-row: span 1;
+        aspect-ratio: 4/3;
+      }
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 85vh;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--dark-card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .lightbox-close:hover {
+      background: var(--primary);
+      color: #000;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--dark-card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      font-size: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .lightbox-nav:hover {
+      background: var(--primary);
+      color: #000;
+    }
+
+    .lightbox-prev {
+      left: -70px;
+    }
+
+    .lightbox-next {
+      right: -70px;
+    }
+
+    @media (max-width: 767px) {
+      .lightbox-prev {
+        left: 10px;
+      }
+      .lightbox-next {
+        right: 10px;
+      }
+    }
+
+    .lightbox-counter {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .cta-card {
+      background: linear-gradient(135deg, var(--dark-card) 0%, rgba(247, 147, 26, 0.1) 100%);
+      border: 1px solid rgba(247, 147, 26, 0.2);
+      border-radius: 32px;
+      padding: 4rem;
+      text-align: center;
+    }
+
+    .cta-card h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-card p {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 60px 0 30px;
+    }
+
+    .footer-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      max-width: 300px;
+      line-height: 1.7;
+    }
+
+    .footer-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+      color: #000;
+      transform: translateY(-3px);
+    }
+
+    /* Scroll to Top */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--gradient-1);
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      border: none;
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .page-hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .page-hero {
+        text-align: center;
+      }
+      .page-hero h1 {
+        font-size: 2rem;
+      }
+      .cta-card {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--dark); }
+    ::-webkit-scrollbar-thumb { background: var(--dark-card); border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+  </style>
 </head>
 <body>
 
-<!-- Analytics -->
-
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMSQK03ZPV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-MMSQK03ZPV');
 </script>
 
-<!-- /Analytics -->
-
-
-  
-  <section data-bs-version="5.1" class="menu menu2 cid-tPW5D5SosN" once="menu" id="menu2-d">
-    
-    <nav class="navbar navbar-dropdown navbar-expand-lg">
-        <div class="container">
-            <div class="navbar-brand">
-                
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-warning text-primary display-1" href="index.html">NerdMiner</a></span>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html"><span class="mobi-mbri mobi-mbri-home mbr-iconfont mbr-iconfont-btn"></span>Home</a></li>
-                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="lottery-mining.html"><span class="mobi-mbri mobi-mbri-cash mbr-iconfont mbr-iconfont-btn"></span>Lottery Mining</a></li><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="fotos.html"><span class="mobi-mbri mobi-mbri-camera mbr-iconfont mbr-iconfont-btn"></span>Galeria de Fotos</a></li></ul>
-                
-                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-warning display-4" href="loja.html"><span class="mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>Adquira Já</a></div>
-            </div>
-        </div>
-    </nav>
-</section>
-
-<section data-bs-version="5.1" class="slider2 cid-tPW63TRMJX" id="slider2-l">
-    
-
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="carousel slide" id="u5sl7XMGjz" data-ride="carousel" data-bs-ride="carousel" data-interval="3000" data-bs-interval="3000">
-                    <ol class="carousel-indicators">
-                        <li data-slide-to="0" data-bs-slide-to="0" class="active" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li><li data-slide-to="1" data-bs-slide-to="1" class="" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li>
-                        <li data-slide-to="2" data-bs-slide-to="2" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li><li data-slide-to="3" data-bs-slide-to="3" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li><li data-slide-to="4" data-bs-slide-to="4" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li><li data-slide-to="5" data-bs-slide-to="5" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li>
-                        <li data-slide-to="6" data-bs-slide-to="6" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li><li data-slide-to="7" data-bs-slide-to="7" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li><li data-slide-to="8" data-bs-slide-to="8" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li><li data-slide-to="9" data-bs-slide-to="9" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li><li data-slide-to="10" data-bs-slide-to="10" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li><li data-slide-to="11" data-bs-slide-to="11" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li><li data-slide-to="12" data-bs-slide-to="12" data-target="#u5sl7XMGjz" data-bs-target="#u5sl7XMGjz"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item slider-image item active">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/1-1900x1425.webp" alt="" data-slide-to="0" data-bs-slide-to="0">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/photo-2023-09-12-20-24-9-720x1280.webp" alt="" data-slide-to="1" data-bs-slide-to="1">
-                                
-                            </div>
-                        </div>
-                        <div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/photo-2023-08-15-12-09-46-768x1024.webp" alt="" data-slide-to="2" data-bs-slide-to="2">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/photo-2023-08-20-07-13-27-471x353.webp" alt="" data-slide-to="3" data-bs-slide-to="3">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/7-960x761.webp" alt="" data-slide-to="4" data-bs-slide-to="4">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/2-960x1280.webp" alt="" data-slide-to="5" data-bs-slide-to="5">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/6-960x720.webp" alt="" data-slide-to="6" data-bs-slide-to="6">
-                                
-                            </div>
-                        </div>
-                        <div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/3-720x1280.webp" alt="" data-slide-to="7" data-bs-slide-to="7">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/10-720x488.webp" alt="" data-slide-to="8" data-bs-slide-to="8">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/9-720x540.webp" alt="" data-slide-to="9" data-bs-slide-to="9">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/8-720x540.webp" alt="" data-slide-to="10" data-bs-slide-to="10">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/4-720x405.webp" alt="" data-slide-to="11" data-bs-slide-to="11">
-                                
-                            </div>
-                        </div><div class="carousel-item slider-image item">
-                            <div class="item-wrapper">
-                                
-                                <img class="d-block w-100" src="assets/images/5-589x1280.webp" alt="" data-slide-to="12" data-bs-slide-to="12">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" data-bs-slide="prev" href="#u5sl7XMGjz">
-                        <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
-                        <span class="sr-only visually-hidden">Previous</span>
-                    </a>
-                    <a class="carousel-control carousel-control-next" role="button" data-slide="next" data-bs-slide="next" href="#u5sl7XMGjz">
-                        <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
-                        <span class="sr-only visually-hidden">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-cpu-fill me-2"></i>NerdMiner
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto me-4">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lottery-mining.html">Lottery Mining</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="fotos.html">Galeria</a>
+        </li>
+      </ul>
+      <a href="loja.html" class="btn btn-primary-custom">
+        <i class="bi bi-cart3 me-2"></i>Comprar Agora
+      </a>
     </div>
-</section>
+  </div>
+</nav>
 
-<section data-bs-version="5.1" class="footer3 cid-tPW5D7Gq5x mbr-reveal" once="footers" id="footer3-h">
-
-    
-
-    
-
-    <div class="container">
-        <div class="row align-center mbr-white">
-            <div class="row row-links">
-                <ul class="foot-menu">
-                    
-                    
-                    
-                    
-                    
-                <li class="foot-menu-item mbr-fonts-style display-7"><a href="index.html" class="text-white text-primary">Home</a></li><li class="foot-menu-item mbr-fonts-style display-7">Lottery Mining</li><li class="foot-menu-item mbr-fonts-style display-7"><a href="loja.html" class="text-primary">Adquira</a></li></ul>
-            </div>
-            
-            <div class="row row-copirayt">
-                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
-                    © Copyright 2023. All Rights Reserved.
-                </p>
-            </div>
-        </div>
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-10" data-aos="fade-up">
+        <h1>Galeria de <span>Fotos</span></h1>
+        <p class="lead mx-auto">
+          Veja o NerdMiner em ação! Confira fotos do mini dispositivo ASIC de mineração de Bitcoin feitas pela comunidade.
+        </p>
+      </div>
     </div>
+  </div>
 </section>
 
+<!-- Gallery Section -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="gallery-grid">
+      <!-- Featured Image -->
+      <div class="gallery-item featured" data-aos="fade-up" data-index="0">
+        <img src="assets/images/1-1900x1425.webp" alt="NerdMiner ESP32 minerador de Bitcoin" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      
+      <!-- Image 2 -->
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" data-index="1">
+        <img src="assets/images/photo-2023-09-12-20-24-9-720x1280.webp" alt="NerdMiner em funcionamento" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      
+      <!-- Image 3 -->
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" data-index="2">
+        <img src="assets/images/photo-2023-08-15-12-09-46-768x1024.webp" alt="NerdMiner com case personalizado" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      
+      <!-- Image 4 -->
+      <div class="gallery-item" data-aos="fade-up" data-index="3">
+        <img src="assets/images/photo-2023-08-20-07-13-27-471x353.webp" alt="NerdMiner tela de mineração" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      
+      <!-- Image 5 -->
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" data-index="4">
+        <img src="assets/images/7-960x761.webp" alt="NerdMiner montado com ventoinha" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      
+      <!-- Image 6 -->
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" data-index="5">
+        <img src="assets/images/2-960x1280.webp" alt="NerdMiner display mostrando hashrate" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      
+      <!-- Image 7 -->
+      <div class="gallery-item" data-aos="fade-up" data-index="6">
+        <img src="assets/images/6-960x720.webp" alt="NerdMiner setup completo" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      
+      <!-- Image 8 -->
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" data-index="7">
+        <img src="assets/images/3-720x1280.webp" alt="NerdMiner LILYGO T-Display" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      
+      <!-- Image 9 -->
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" data-index="8">
+        <img src="assets/images/10-720x488.webp" alt="NerdMiner com iluminação RGB" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      
+      <!-- Image 10 -->
+      <div class="gallery-item" data-aos="fade-up" data-index="9">
+        <img src="assets/images/9-720x540.webp" alt="NerdMiner mini ASIC Bitcoin" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      
+      <!-- Image 11 -->
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" data-index="10">
+        <img src="assets/images/8-720x540.webp" alt="NerdMiner em operação" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      
+      <!-- Image 12 -->
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" data-index="11">
+        <img src="assets/images/4-720x405.webp" alt="NerdMiner display informações" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      
+      <!-- Image 13 -->
+      <div class="gallery-item" data-aos="fade-up" data-index="12">
+        <img src="assets/images/5-589x1280.webp" alt="NerdMiner vertical setup" loading="lazy">
+        <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/ytplayer/index.js"></script>
-  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-  <script src="assets/theme/js/script.js"></script>
-  
-  
-  
- <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
-    <input name="animation" type="hidden">
-  </body>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <button class="lightbox-close" aria-label="Fechar"><i class="bi bi-x-lg"></i></button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Anterior"><i class="bi bi-chevron-left"></i></button>
+    <button class="lightbox-nav lightbox-next" aria-label="Próximo"><i class="bi bi-chevron-right"></i></button>
+    <img src="" alt="" id="lightbox-img">
+    <div class="lightbox-counter"><span id="lightbox-current">1</span> / <span id="lightbox-total">13</span></div>
+  </div>
+</div>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10" data-aos="zoom-in">
+        <div class="cta-card">
+          <h2>Quer ter o seu NerdMiner? 📸</h2>
+          <p>Monte o seu e faça parte da comunidade!</p>
+          <a href="loja.html" class="btn btn-primary-custom btn-lg">
+            <i class="bi bi-cart3 me-2"></i>Ver Modelos e Comprar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4 mb-lg-0">
+        <div class="footer-brand">
+          <i class="bi bi-cpu-fill me-2"></i>NerdMiner
+        </div>
+        <p class="footer-text">
+          O menor minerador de Bitcoin do mundo. Aprenda sobre mineração de forma prática, 
+          divertida e educativa.
+        </p>
+        <div class="social-links mt-4">
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+        <h5 class="footer-title">Navegação</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lottery-mining.html">Lottery Mining</a></li>
+          <li><a href="fotos.html">Galeria</a></li>
+          <li><a href="loja.html">Loja</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+        <h5 class="footer-title">Recursos</h5>
+        <ul class="footer-links">
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#how-it-works">Como Funciona</a></li>
+          <li><a href="loja.html">Modelos</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <h5 class="footer-title">Sobre o Projeto</h5>
+        <p class="footer-text">
+          O NerdMiner é um projeto open-source que utiliza ESP32 para mineração educacional de Bitcoin.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2023-2025 NerdMiner Brasil. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top -->
+<button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 800, easing: 'ease-out-cubic' });
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar-custom');
+    const scrollTop = document.getElementById('scrollTop');
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+    if (window.scrollY > 500) scrollTop.classList.add('visible');
+    else scrollTop.classList.remove('visible');
+  });
+
+  // Scroll to top
+  document.getElementById('scrollTop').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Lightbox functionality
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCurrent = document.getElementById('lightbox-current');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const images = Array.from(galleryItems).map(item => ({
+    src: item.querySelector('img').src,
+    alt: item.querySelector('img').alt
+  }));
+  let currentIndex = 0;
+
+  document.getElementById('lightbox-total').textContent = images.length;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    updateLightbox();
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function updateLightbox() {
+    lightboxImg.src = images[currentIndex].src;
+    lightboxImg.alt = images[currentIndex].alt;
+    lightboxCurrent.textContent = currentIndex + 1;
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateLightbox();
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateLightbox();
+  }
+
+  // Event listeners
+  galleryItems.forEach((item, index) => {
+    item.addEventListener('click', () => openLightbox(index));
+  });
+
+  document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  document.querySelector('.lightbox-prev').addEventListener('click', prevImage);
+  document.querySelector('.lightbox-next').addEventListener('click', nextImage);
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'ArrowRight') nextImage();
+  });
+</script>
+
+</body>
 </html>
