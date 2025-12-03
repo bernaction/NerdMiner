@@ -1,0 +1,22 @@
+# robots.txt - NerdMiner Brasil
+# https://nerdminer.com.br
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nerdminer.com.br/sitemap.xml
+
+# Bloquear pastas de assets desnecessárias para indexação
+Disallow: /assets/bootstrap/
+Disallow: /assets/animatecss/
+Disallow: /assets/dropdown/
+Disallow: /assets/mobirise/
+Disallow: /assets/smoothscroll/
+Disallow: /assets/socicon/
+Disallow: /assets/theme/
+Disallow: /assets/web/
+Disallow: /assets/ytplayer/
+
+# Permitir imagens para indexação
+Allow: /assets/images/
