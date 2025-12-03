@@ -28,7 +28,9 @@
   <meta name="twitter:description" content="Dispositivo ESP32 para mineração de Bitcoin. Aprenda sobre Lottery Mining de forma prática e educativa.">
   <meta name="twitter:image" content="https://nerdminer.com.br/assets/images/index-meta.jpg">
   
-  <link rel="shortcut icon" href="assets/images/img-2644-128x70-1.png" type="image/x-icon">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -452,6 +454,111 @@
       line-height: 1.7;
     }
 
+    /* Install Section */
+    .install-section {
+      padding: 120px 0;
+      background: var(--dark);
+    }
+
+    .install-card {
+      background: var(--dark-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      padding: 3rem;
+      height: 100%;
+    }
+
+    .install-card.highlight {
+      background: linear-gradient(135deg, var(--dark-card) 0%, rgba(247, 147, 26, 0.1) 100%);
+      border-color: rgba(247, 147, 26, 0.3);
+    }
+
+    .install-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .install-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .install-step-number {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      border-radius: 50%;
+      background: rgba(247, 147, 26, 0.2);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .install-step-content h5 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .install-step-content p {
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .install-image {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .install-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .browser-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(247, 147, 26, 0.1);
+      border: 1px solid rgba(247, 147, 26, 0.2);
+      border-radius: 50px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-top: 1.5rem;
+    }
+
+    .browser-badge i {
+      font-size: 1.1rem;
+    }
+
+    .flash-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--gradient-1);
+      color: #000;
+      font-weight: 600;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    .flash-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(247, 147, 26, 0.3);
+      color: #000;
+    }
+
     /* Stats Section */
     .stats-section {
       padding: 80px 0;
@@ -805,6 +912,9 @@
           <a class="nav-link active" href="index.html">Home</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#install">Instalação</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="lottery-mining.html">Lottery Mining</a>
         </li>
         <li class="nav-item">
@@ -847,7 +957,7 @@
         </div>
         <div class="hero-stats">
           <div class="stat-item">
-            <h3>~78</h3>
+            <h3>~260</h3>
             <p>kH/s Hashrate</p>
           </div>
           <div class="stat-item">
@@ -961,12 +1071,89 @@
   </div>
 </section>
 
+<!-- Install Firmware Section -->
+<section class="install-section" id="install">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-badge">
+        <i class="bi bi-download"></i> Instalação
+      </span>
+      <h2 class="section-title">Como Instalar o Firmware</h2>
+      <p class="section-subtitle mx-auto">
+        Comprou um LILYGO ESP32 no AliExpress? Veja como instalar o NerdMiner em poucos cliques!
+      </p>
+    </div>
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="install-card highlight">
+          <div class="install-step">
+            <div class="install-step-number">1</div>
+            <div class="install-step-content">
+              <h5>Acesse o Bitronics Flasher</h5>
+              <p>Abra o site <strong>flasher.bitronics.store</strong> no seu navegador Google Chrome. O processo só funciona no Chrome!</p>
+            </div>
+          </div>
+          <div class="install-step">
+            <div class="install-step-number">2</div>
+            <div class="install-step-content">
+              <h5>Selecione "Nerdminer"</h5>
+              <p>No menu de dispositivos, escolha a opção <strong>Nerdminer</strong> para carregar o firmware correto.</p>
+            </div>
+          </div>
+          <div class="install-step">
+            <div class="install-step-number">3</div>
+            <div class="install-step-content">
+              <h5>Escolha seu Dispositivo</h5>
+              <p>Selecione o modelo da sua placa: <strong>NERDMINERV2 ORIGINAL BOARD (TDISPLAY-S3)</strong> para a versão padrão ou o modelo correspondente.</p>
+            </div>
+          </div>
+          <div class="install-step">
+            <div class="install-step-number">4</div>
+            <div class="install-step-content">
+              <h5>Selecione a Versão</h5>
+              <p>Escolha a versão mais recente do firmware disponível (ex: v1.8.3).</p>
+            </div>
+          </div>
+          <div class="install-step">
+            <div class="install-step-number">5</div>
+            <div class="install-step-content">
+              <h5>Conecte e Instale!</h5>
+              <p>Clique em <strong>"Connect"</strong> e selecione a porta USB do seu ESP32. Depois clique em <strong>"Start Flashing"</strong> e aguarde a instalação.</p>
+            </div>
+          </div>
+          
+          <a href="https://flasher.bitronics.store/" target="_blank" class="flash-btn">
+            <i class="bi bi-lightning-charge-fill"></i>
+            Acessar Bitronics Flasher
+          </a>
+          
+          <div class="browser-badge">
+            <i class="bi bi-browser-chrome"></i>
+            Instalação apenas no Google Chrome
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="install-image">
+          <img src="assets/images/bitronics-flasher.jpg" alt="Bitronics Flasher - Instalação do NerdMiner" loading="lazy">
+        </div>
+        <div class="text-center mt-4">
+          <p class="text-muted">
+            <i class="bi bi-info-circle me-2"></i>
+            A instalação leva cerca de 1-2 minutos. Não desconecte o USB durante o processo!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Stats Section -->
 <section class="stats-section">
   <div class="container">
     <div class="stats-grid">
       <div class="stat-box" data-aos="zoom-in" data-aos-delay="0">
-        <h2>78kH/s</h2>
+        <h2>260kH/s</h2>
         <p>Hashrate Médio</p>
       </div>
       <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
@@ -1009,7 +1196,7 @@
             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
                 Sim! O NerdMiner realiza cálculos reais de mineração de Bitcoin e envia os resultados para a rede. 
-                Porém, devido ao baixo hashrate (~78 kH/s), as chances de encontrar um bloco são extremamente baixas - 
+                Porém, devido ao baixo hashrate (~260 kH/s), as chances de encontrar um bloco são extremamente baixas - 
                 por isso chamamos de "Lottery Mining". É como jogar na loteria, mas aprendendo sobre Bitcoin!
               </div>
             </div>
@@ -1022,9 +1209,10 @@
             </h2>
             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                As chances são aproximadamente <strong>120 vezes menores</strong> do que ganhar na Mega-Sena! 
-                Mas diferente da loteria convencional, você pode "jogar" 24 horas por dia, 7 dias por semana, 
-                gastando menos de R$1 por mês de energia. É a loteria mais barata do mundo!
+                Com 260 kH/s, sua chance por ano é de aproximadamente <strong>1 em 79 bilhões</strong>. 
+                Para comparar: ganhar na Mega-Sena (1 em 50 milhões) é cerca de <strong>1.593 vezes mais fácil</strong>! 
+                Mas diferente da loteria convencional, o NerdMiner "joga" 24 horas por dia, 7 dias por semana, 
+                gastando menos de R$1 por mês de energia. É a loteria mais barata e divertida do mundo!
               </div>
             </div>
           </div>
@@ -1050,9 +1238,11 @@
             </h2>
             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                Não! O NerdMiner vem com o firmware pré-instalado. Basta conectar ao USB, 
-                configurar sua rede WiFi e endereço Bitcoin através da interface web intuitiva, e pronto - 
-                ele começa a minerar automaticamente. Leva menos de 5 minutos!
+                Não! Se você comprou o LILYGO ESP32 no AliExpress, basta acessar o site 
+                <a href="https://flasher.bitronics.store/" target="_blank" style="color: var(--primary);">flasher.bitronics.store</a> 
+                no Google Chrome, selecionar seu modelo, clicar em Connect e Start Flashing. 
+                Depois é só configurar sua rede WiFi e endereço Bitcoin através da interface web intuitiva - 
+                leva menos de 5 minutos!
               </div>
             </div>
           </div>
